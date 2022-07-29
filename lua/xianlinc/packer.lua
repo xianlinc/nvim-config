@@ -6,7 +6,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    
+
     -- Color Schemes
     use 'folke/tokyonight.nvim'
     use 'gruvbox-community/gruvbox'
@@ -16,13 +16,13 @@ return require('packer').startup(function()
     use 'folke/which-key.nvim'
     use 'tpope/vim-surround'
     use 'preservim/nerdtree'
+    use 'windwp/nvim-autopairs'
 
     -- Configurations for Nvim LSP
-    use 'neovim/nvim-lspconfig' 
+    use 'neovim/nvim-lspconfig'
     use 'williamboman/mason.nvim'
 
     -- Code completion
-    use 'neovim/nvim-lspconfig'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'

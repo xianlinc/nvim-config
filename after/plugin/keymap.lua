@@ -1,5 +1,6 @@
 -- Telescope keymaps
 vim.keymap.set('n','<leader>ff',require('telescope.builtin').find_files,{noremap=true,desc="Find Files"})
+vim.keymap.set('n','<leader>fr',require('telescope.builtin').oldfiles,{noremap=true, desc="Find Recent"})
 vim.keymap.set('n','<leader>rg',require('telescope.builtin').live_grep,{noremap=true, desc="Live Grep"})
 
 -- Clear highlights
