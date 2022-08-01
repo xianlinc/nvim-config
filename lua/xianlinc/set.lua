@@ -1,4 +1,5 @@
 vim.opt.guicursor = ""
+vim.opt.mouse = "a"
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -15,9 +16,24 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 require("mason").setup()
-require("which-key").setup {
-    presets = {
-        operators = false
-    }
-}
-require("nvim-autopairs").setup{}
+require("which-key").setup({
+	presets = {
+		operators = false,
+	},
+})
+
+require("nvim-autopairs").setup({})
+
+require("null-ls").setup({
+	sources = {
+		require("null-ls").builtins.formatting.stylua,
+		require("null-ls").builtins.formatting.prettier,
+		require("null-ls").builtins.diagnostics.eslint,
+	},
+})
+
+require("lualine").setup({
+	options = {
+		theme = "gruvbox",
+	},
+})

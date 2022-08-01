@@ -1,4 +1,3 @@
-require('xianlinc')
+require("xianlinc")
 
-vim.g.mapleader=","
-
+vim.g.mapleader = ","

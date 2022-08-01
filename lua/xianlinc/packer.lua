@@ -36,4 +36,11 @@ return require('packer').startup(function()
     -- Telescope stuff
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-lua/plenary.nvim'
+
+    -- null-lsp
+    use 'jose-elias-alvarez/null-ls.nvim'
+
+    -- lualine customisation
+    use 'nvim-lualine/lualine.nvim'
+    use 'kyazdani42/nvim-web-devicons'
 end)

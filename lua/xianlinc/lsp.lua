@@ -1,6 +1,6 @@
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr)
+local common_on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
   -- Mapping.
@@ -85,11 +85,23 @@ cmp.setup.cmdline(':', {
     })
 })
 
+local util = require 'vim.lsp.util'
+
+local formatting_callback = function(client, bufnr)
+  vim.keymap.set('n', '<leader>f', function()
+    local params = util.make_formatting_params({})
+    client.request('textDocument/formatting', params, nil, bufnr) 
+  end, {buffer = bufnr})
+end
+
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 require('lspconfig')['sumneko_lua'].setup {
-    on_attach = on_attach,
+    on_attach = function(client,bufnr)
+        formatting_callback(client,bufnr)
+        common_on_attach(client, bufnr)
+    end,
     flags = lsp_flags,
     settings = {
         Lua = {
@@ -100,11 +112,14 @@ require('lspconfig')['sumneko_lua'].setup {
     }
 }
 require('lspconfig')['pyright'].setup{
-    on_attach = on_attach,
+    on_attach = common_on_attach,
     flags = lsp_flags,
 }
 require('lspconfig')['tsserver'].setup{
-    on_attach = on_attach,
+    on_attach = function(client,bufnr)
+        formatting_callback(client,bufnr)
+        common_on_attach(client, bufnr)
+    end,
     flags = lsp_flags,
 }
 
