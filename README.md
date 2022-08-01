@@ -15,6 +15,6 @@ Full list of plugins can be found in lua/xianlinc/packer.lua
 - **packer** as a plugin manager
 - **nvim-lspconfig** to configure LSP
 - **cmp-nvim** for code autocompletion
-- **vs-snips** for snippers
+- **vs-snips** for snippets
 - **mason** as a lsp/formatter package manager
 - **telescope** for fuzzy finding
