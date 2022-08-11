@@ -6,4 +6,3 @@ vim.keymap.set('v', '<leader>y','"+y',{noremap=true})
 vim.keymap.set('n', '<leader>yy','"+yy',{noremap=true})
 -- Pasting to clipboard
 vim.keymap.set('n', '<leader>p','"+p',{noremap=true})
-

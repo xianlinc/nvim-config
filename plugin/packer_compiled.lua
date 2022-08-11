@@ -94,10 +94,25 @@ _G.packer_plugins = {
     path = "/Users/evan/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["glow.nvim"] = {
+    loaded = true,
+    path = "/Users/evan/.local/share/nvim/site/pack/packer/start/glow.nvim",
+    url = "https://github.com/ellisonleao/glow.nvim"
+  },
   gruvbox = {
     loaded = true,
     path = "/Users/evan/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/evan/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/Users/evan/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
@@ -108,6 +123,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/evan/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/preservim/nerdtree"
+  },
+  ["neuron.nvim"] = {
+    loaded = true,
+    path = "/Users/evan/.local/share/nvim/site/pack/packer/start/neuron.nvim",
+    url = "https://github.com/oberblastmeister/neuron.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/evan/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -129,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/evan/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/evan/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/evan/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -138,6 +168,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/evan/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/Users/evan/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -158,6 +193,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/evan/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  vimwiki = {
+    loaded = true,
+    path = "/Users/evan/.local/share/nvim/site/pack/packer/start/vimwiki",
+    url = "https://github.com/vimwiki/vimwiki"
   },
   ["which-key.nvim"] = {
     loaded = true,
