@@ -7,3 +7,7 @@ let g:vimwiki_list = [{
 	\ 'path_html': '~/vimwiki/site_html/',
 	\ 'custom_wiki2html': 'vimwiki_markdown',
 	\ 'template_ext': '.tpl'}]
+
+" Open file in Obsidian vault
+command IO execute "silent !open 'obsidian://open?vault=vimwiki&file=" . expand('%:r') . "'"
+nnoremap <leader>io :IO<CR>

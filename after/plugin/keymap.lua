@@ -20,8 +20,20 @@ local grep_notes = function()
 	require("telescope.builtin").live_grep({ cwd = vim.fn.expand("~/vimwiki") })
 end
 
-vim.keymap.set("n", "<leader>nf", find_notes, { noremap = true, desc = "Find Notes" })
-vim.keymap.set("n", "<leader>ng", grep_notes, { noremap = true, desc = "Grep Notes" })
+local find_diary = function()
+	require("telescope.builtin").find_files({ cwd = vim.fn.expand("~/vimwiki/diary") })
+end
+
+local grep_diary = function()
+	require("telescope.builtin").live_grep({ cwd = vim.fn.expand("~/vimwiki/diary") })
+end
+
+
+vim.keymap.set("n", "<leader>wf", find_notes, { noremap = true, desc = "Find Notes" })
+vim.keymap.set("n", "<leader>wg", grep_notes, { noremap = true, desc = "Grep Notes" })
+
+vim.keymap.set("n", "<leader>w<leader>f", find_diary, { noremap = true, desc = "Find Diary" })
+vim.keymap.set("n", "<leader>w<leader>g", grep_diary, { noremap = true, desc = "Grep Diary" })
 
 vim.keymap.set("n", "<leader>nn", "<Plug>MarkdownPreviewToggle", { noremap = true, desc = "Markdown Preview" })
 
@@ -29,4 +41,5 @@ vim.keymap.set("n", "<leader>nn", "<Plug>MarkdownPreviewToggle", { noremap = tru
 vim.keymap.set('n','<leader>md','<cmd>:%s/->/→/g<cr>', {noremap=true,desc="Change -> to →"})
 
 -- change buffer 
-vim.keymap.set('n','<leader>b','<cmd>:ls<cr> :b<space>', {noremap=true,desc="Change buffer"})
+vim.keymap.set('n','<leader>b', '<cmd>:ls<cr> :b<space>', {noremap=true,desc="Change buffer"})
+
