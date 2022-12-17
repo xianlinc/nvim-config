@@ -1,4 +1,5 @@
-# nvim-config
+# DEPRECATED I now use `astronvim`, look at the dotfiles repo to find the latest version of my setup
+# nvim-config 
 
 ## Setup
 1. Install the stable release version of neovim
